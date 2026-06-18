@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_aws_ami_tree" model="ir.ui.view">
+        <field name="name">aws.ami.tree</field>
+        <field name="model">aws.ami</field>
+        <field name="arch" type="xml">
+            <tree string="AMIs">
+                <field name="name"/>
+                <field name="ami_id"/>
+                <field name="version"/>
+                <field name="architecture"/>
+                <field name="creation_date"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_aws_ami_form" model="ir.ui.view">
+        <field name="name">aws.ami.form</field>
+        <field name="model">aws.ami</field>
+        <field name="arch" type="xml">
+            <form string="AMI">
+                <header>
+                    <button name="action_refresh_from_aws" string="Actualizar desde AWS" type="object" class="btn-primary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="ami_id"/>
+                        <field name="version"/>
+                        <field name="architecture"/>
+                        <field name="creation_date"/>
+                        <field name="active"/>
+                        <field name="is_official"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

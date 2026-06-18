@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_aws_integration_user,aws.integration.user,model_aws_integration,base.group_user,1,1,1,1
+access_aws_ami_user,aws.ami.user,model_aws_ami,base.group_user,1,0,0,0
+access_aws_terminate_wizard_user,aws.terminate.wizard.user,model_aws_terminate_wizard,base.group_user,1,1,1,1
