@@ -257,7 +257,7 @@ Descripción: {record.ami_id.description}
         """Obtiene el cliente EC2 de boto3 con las credenciales configuradas"""
         # Opción 1: Usar credenciales de AWS CLI (recomendado)
         try:
-            return boto3.client('ec2')
+            return boto3.client('ec2', region_name='us-east-1')  # Cambia la región según tus necesidades
         except Exception as e:
             _logger.error(f"Error al conectar con AWS: {e}")
             raise UserError('Error al conectar con AWS. Verifica tus credenciales.')
