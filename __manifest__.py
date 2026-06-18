@@ -14,7 +14,7 @@
     'depends': ['base'],
     'data': [
         'views/aws_integration_views.xml',
-        'security/ir.model.access.csv',
+        'security/ir.mode.access.csv',
     ],
     'installable': True,
     'application': True,
