@@ -1,0 +1,28 @@
+name: desplegar addons
+on:
+  push:
+      branches: [main]
+  workflow_dispatch: 
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: copiar ficheros
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          source: "./"
+          target: "/opt/odoo-addons/log_incident"
+      
+      - name: Reiniciar Odoo
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            docker restart odoo-app
