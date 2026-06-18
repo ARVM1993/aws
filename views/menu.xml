@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_aws_instances" model="ir.actions.act_window">
+        <field name="name">Instancias AWS</field>
+        <field name="res_model">aws.integration</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_aws_root" name="AWS" sequence="10"/>
+
+    <menuitem id="menu_aws_instances"
+              name="Instancias"
+              parent="menu_aws_root"
+              action="action_aws_instances"/>
+
+</odoo>
