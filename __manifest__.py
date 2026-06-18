@@ -13,7 +13,7 @@
     'website': 'https://tusitio.com',
     'depends': ['base'],
     'data': [
-        'views/aws_integration_view.xml',
+        'views/aws_integration_views.xml',
         'security/ir.model.access.csv',
     ],
     'installable': True,
