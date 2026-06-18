@@ -16,7 +16,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_KEY }}
           source: "./"
-          target: "/opt/odoo-addons/log_incident"
+          target: "/opt/odoo-addons/odoo_aws"
       
       - name: Reiniciar Odoo
         uses: appleboy/ssh-action@master
